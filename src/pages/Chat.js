@@ -10,9 +10,9 @@ export const Chat = () => {
       <div className="inbox_msg">
         <Users />
         {/* <!-- Chat inicio --> */}
-        {/* <ChatMessages /> */}
+        <ChatMessages />
         {/* <!-- Chat Fin --> */}
-        <ChatSelect />
+        {/* <ChatSelect /> */}
       </div>
     </div>
   );
