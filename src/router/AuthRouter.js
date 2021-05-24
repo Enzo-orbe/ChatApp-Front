@@ -2,14 +2,21 @@ import React from "react";
 import { Redirect, Route, Switch } from "react-router";
 import { LoginBox } from "../pages/LoginBox";
 import { RegisterPage } from "../pages/RegisterPage";
+import "../css/login-register.css";
 
 export const AuthRouter = () => {
   return (
-    <Switch>
-      <Route exact path="/auth/login" component={LoginBox} />
-      <Route exact path="/auth/register" component={RegisterPage} />
+    <div className="limiter">
+      <div className="container-login100">
+        <div className="wrap-login100 p-t-50 p-b-90">
+          <Switch>
+            <Route exact path="/auth/login" component={LoginBox} />
+            <Route exact path="/auth/register" component={RegisterPage} />
 
-      <Redirect to="/auth/login" />
-    </Switch>
+            <Redirect to="/auth/login" />
+          </Switch>
+        </div>
+      </div>
+    </div>
   );
 };
