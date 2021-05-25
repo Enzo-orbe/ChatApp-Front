@@ -1,11 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { Spinner } from "react-bootstrap";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Redirect } from "react-router-dom";
 import { AuthContext } from "../auth/AuthContext";
 import { Chat } from "../pages/Chat";
 import { AuthRouter } from "./AuthRouter";
