@@ -12,8 +12,7 @@ img {
   background: #f8f8f8 none repeat scroll 0 0;
   float: left;
   overflow: hidden;
-  width: 40%;
-  border-right: 1px solid #c4c4c4;
+  border: 1px solid #c4c4c4;
 }
 
 .inbox_msg {
@@ -46,7 +45,7 @@ img {
 }
 
 .recent_heading h4 {
-  color: #7674fe;
+  color: #aed6f1;
   font-size: 18px;
   margin: auto;
 }
@@ -113,6 +112,8 @@ img {
 
 .inbox_chat {
   height: 100vh;
+  background: #f8f8f8 none repeat scroll 0 0;
+  border-right: 1px solid #c4c4c4;
   overflow-y: scroll;
 }
 
@@ -156,12 +157,12 @@ img {
 .mesgs {
   float: left;
   padding: 30px 15px 0 25px;
-  width: 60%;
-  height: 100vh;
+  width: 100%;
+  height: 95vh;
 }
 
 .sent_msg p {
-  background: #7674fe none repeat scroll 0 0;
+  background: #aed6f1 none repeat scroll 0 0;
   border-radius: 3px;
   font-size: 14px;
   margin: 0;
@@ -195,12 +196,13 @@ img {
 }
 
 .msg_send_btn {
-  background: #7674fe none repeat scroll 0 0;
+  background: #aed6f1 none repeat scroll 0 0;
   border: medium none;
   border-radius: 5px;
   color: #fff;
   cursor: pointer;
   font-size: 17px;
+  margin: 3px;
   height: 33px;
   width: 70px;
 }
@@ -217,6 +219,7 @@ img {
 .search-bar:focus,
 .write_msg:focus {
   outline: none;
+  color: "#AED6F1";
 }
 
 textarea {
@@ -231,6 +234,6 @@ textarea {
   position: absolute;
   top: 40%;
   right: 0;
-  width: 60%;
+  width: 100%;
   text-align: center;
 }

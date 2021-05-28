@@ -119,7 +119,7 @@ iframe {
 [ Utility ]*/
 .txt1 {
   font-size: 16px;
-  color: #827ffe;
+  color: #aed6f1;
   line-height: 1.4;
 }
 
@@ -326,7 +326,7 @@ iframe {
   padding: 0 20px;
   width: 100%;
   height: 62px;
-  background-color: #827ffe;
+  background-color: #aed6f1;
   border-radius: 3px;
 
   -webkit-transition: all 0.4s;
@@ -336,7 +336,7 @@ iframe {
 }
 
 .login100-form-btn:hover {
-  background-color: #403866;
+  background-color: #aed6f1;
 }
 
 .login100-form-btn:disabled {
@@ -407,6 +407,12 @@ iframe {
     visibility: visible;
     opacity: 1;
   }
+}
+
+.card {
+  box-shadow: -2px 0px 12px 3px rgba(209, 209, 209, 0.99);
+  -webkit-box-shadow: -2px 0px 12px 3px rgba(209, 209, 209, 0.99);
+  -moz-box-shadow: -2px 0px 12px 3px rgba(209, 209, 209, 0.99);
 }
 
 /*//////////////////////////////////////////////////////////////////

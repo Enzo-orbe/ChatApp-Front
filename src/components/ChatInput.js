@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { Container } from "react-bootstrap";
 import { AuthContext } from "../auth/AuthContext";
 import { ChatContext } from "../context/chat/ChatContext";
 import { SocketContext } from "../context/SocketContext";
@@ -31,23 +32,25 @@ export const ChatInput = () => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
-      <div className="type_msg row">
-        <div className="input_msg_write col-sm-9">
-          <input
-            value={message}
-            onChange={handleChange}
-            type="text"
-            className="write_msg"
-            placeholder="Mensaje..."
-          />
+    <Container fluid style={{ marginBottom: "3px" }}>
+      <form onSubmit={onSubmit}>
+        <div className="type_msg row">
+          <div className="input_msg_write col-sm-9">
+            <input
+              value={message}
+              onChange={handleChange}
+              type="text"
+              className="write_msg"
+              placeholder="Mensaje..."
+            />
+          </div>
+          <div className="col-sm-3 text-center">
+            <button className="msg_send_btn mt-3" type="submit">
+              enviar
+            </button>
+          </div>
         </div>
-        <div className="col-sm-3 text-center">
-          <button className="msg_send_btn mt-3" type="submit">
-            enviar
-          </button>
-        </div>
-      </div>
-    </form>
+      </form>
+    </Container>
   );
 };

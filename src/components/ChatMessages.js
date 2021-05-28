@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
+import { Container } from "react-bootstrap";
 import { AuthContext } from "../auth/AuthContext";
 import { ChatContext } from "../context/chat/ChatContext";
 import { ChatInput } from "./ChatInput";
 import { IncomingMessage } from "./IncomingMessage";
 import { OutgoingMessage } from "./OutgoingMessage";
+import { SelectFile } from "./SelectFile";
 
 export const ChatMessages = () => {
   const { chatState } = useContext(ChatContext);
@@ -12,7 +14,7 @@ export const ChatMessages = () => {
   const { uid } = auth;
 
   return (
-    <div className="mesgs">
+    <Container fluid className="mesgs">
       {/* <!-- Historia inicio --> */}
       <div id="messages" className="msg_history">
         {mensajes.map((msg) =>
@@ -24,6 +26,7 @@ export const ChatMessages = () => {
         )}
       </div>
       <ChatInput />
-    </div>
+      <SelectFile />
+    </Container>
   );
 };
