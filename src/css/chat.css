@@ -32,13 +32,14 @@ img {
 }
 
 .srch_bar {
-  display: inline-block;
+  display: flex;
   text-align: right;
-  width: 60%;
-  padding: 5px;
+  width: 70%;
+  padding: 3px;
 }
 
 .headind_srch {
+  margin: 5;
   padding: 10px 10px 10px 10px;
   overflow: hidden;
   border-bottom: 1px solid #c4c4c4;

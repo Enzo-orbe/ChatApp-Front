@@ -26,6 +26,18 @@ export const chatReducer = (state, action) => {
       } else {
         return state;
       }
+    case Types.nuevoMensajeImagen:
+      if (
+        state.chatActivo === action.payload.from ||
+        state.chatActivo === action.payload.to
+      ) {
+        return {
+          ...state,
+          mensajes: [...state.mensajes, action.payload],
+        };
+      } else {
+        return state;
+      }
     case Types.mensajesCargados:
       return {
         ...state,

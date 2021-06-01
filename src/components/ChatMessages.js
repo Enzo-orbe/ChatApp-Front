@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import { AuthContext } from "../auth/AuthContext";
 import { ChatContext } from "../context/chat/ChatContext";
 import { ChatInput } from "./ChatInput";
+import { ImageTagger } from "./ImageTagger";
 import { IncomingMessage } from "./IncomingMessage";
 import { OutgoingMessage } from "./OutgoingMessage";
 import { SelectFile } from "./SelectFile";
@@ -19,14 +20,15 @@ export const ChatMessages = () => {
       <div id="messages" className="msg_history">
         {mensajes.map((msg) =>
           msg.to === uid ? (
-            <IncomingMessage key={msg._id} msg={msg} />
+            <IncomingMessage key={msg._id || msg.to} msg={msg} />
           ) : (
-            <OutgoingMessage key={msg._id} msg={msg} />
+            <OutgoingMessage key={msg._id || msg.from} msg={msg} />
           )
         )}
       </div>
       <ChatInput />
       <SelectFile />
+      <ImageTagger />
     </Container>
   );
 };

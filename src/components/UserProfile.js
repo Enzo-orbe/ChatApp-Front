@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
+import { Container } from "react-bootstrap";
 import { AuthContext } from "../auth/AuthContext";
 
 export const UserProfile = () => {
   const { auth, logout } = useContext(AuthContext);
 
   return (
-    <div className="headind_srch">
+    <Container fluid className="headind_srch">
       <div className="recent_heading mt-2">
         <h4>{auth.name}</h4>
       </div>
@@ -16,6 +17,6 @@ export const UserProfile = () => {
           </button>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };

@@ -46,6 +46,16 @@ export const SocketProvider = ({ children }) => {
       scrollToBottom("messages");
     });
   }, [socket, dispatch]);
+  useEffect(() => {
+    socket?.on("mensaje-image", (mensaje) => {
+      dispatch({
+        type: Types.nuevoMensajeImagen,
+        payload: mensaje,
+      });
+
+      scrollToBottom("messages");
+    });
+  }, [socket, dispatch]);
 
   return (
     <SocketContext.Provider value={{ socket, online }}>

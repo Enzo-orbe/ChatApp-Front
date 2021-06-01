@@ -1,16 +1,16 @@
-import React, { useContext, useState } from "react";
-import { Container, Button } from "react-bootstrap";
+import React, { useContext } from "react";
+import { Container } from "react-bootstrap";
 import { ChatContext } from "../context/chat/ChatContext";
 export const SelectFile = () => {
-  const { setPictures } = useContext(ChatContext);
+  const { setPictures, setModal } = useContext(ChatContext);
 
   const handleChange = (e) => {
     const reader = new FileReader();
     reader.readAsDataURL(e);
     reader.onload = () => {
       const base64 = reader.result;
-      const data = base64.split(",");
-      setPictures(data[1]);
+      setPictures(base64);
+      setModal(true);
     };
   };
 
